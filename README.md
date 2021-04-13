@@ -5,5 +5,5 @@ This is a sample project on how to implement GraphQL and Apollo Federation in Sp
 
 Apollo server with library @apollo/gateway
 
-To start Apollo Server -> 
+Start Apollo Server -> 
   node gateway.js
