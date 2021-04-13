@@ -3,7 +3,7 @@ This is a sample project on how to implement GraphQL and Apollo Federation in Sp
 
 3d party apollo federation library for implementing services -> https://github.com/rkudryashov/graphql-java-federation 
 
-Apollo server with library @apollo/gateway
+Apollo Server with library @apollo/gateway
 
 Start Apollo Server -> 
   node gateway.js
