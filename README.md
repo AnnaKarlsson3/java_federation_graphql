@@ -18,5 +18,24 @@ dependencies {
 }
 ```
 
+```java
+<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>graphql-spring-boot-starter</artifactId>
+			<version>11.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>voyager-spring-boot-starter</artifactId>
+			<version>11.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>graphiql-spring-boot-starter</artifactId>
+			<version>11.0.0</version>
+			<scope>runtime</scope>
+		</dependency>
+```
+
 To start Apollo Server -> 
   node gateway.js
