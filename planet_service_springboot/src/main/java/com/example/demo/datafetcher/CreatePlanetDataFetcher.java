@@ -24,7 +24,6 @@ public class CreatePlanetDataFetcher implements DataFetcher<PlanetDto> {
         int size = environment.getArgument("size");
 
         var newPlanet = planetService.create(name, size);
-
         return planetConverter.apply(newPlanet);
     }
 }

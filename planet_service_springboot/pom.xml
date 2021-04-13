@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>planet_service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>user</name>
+	<name>planet_service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -23,11 +23,6 @@
 			<id>jcenter</id>
 			<name>jcenter</name>
 			<url>https://jcenter.bintray.com/</url>
-		</repository>
-		<repository>
-			<id>jfrog-snapshots</id>
-			<name>oss-jfrog-artifactory-snapshots</name>
-			<url>https://oss.jfrog.org/artifactory/oss-snapshot-local</url>
 		</repository>
 	</repositories>
 
@@ -60,32 +55,31 @@
 			<artifactId>graphql-java-federation</artifactId>
 			<version>0.1.16</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphql-spring-boot-starter</artifactId>
-			<version>6.0.1</version>
+			<version>11.0.0</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>voyager-spring-boot-starter</artifactId>
-			<version>6.0.1</version>
+			<version>11.0.0</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphiql-spring-boot-starter</artifactId>
-			<version>6.0.1</version>
+			<version>11.0.0</version>
 			<scope>runtime</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphql-spring-boot-starter-test</artifactId>
-			<version>6.0.1</version>
+			<version>11.0.0</version>
 			<scope>test</scope>
 		</dependency>
+
+
+
 	</dependencies>
 
 	<build>

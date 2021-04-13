@@ -28,7 +28,7 @@ public class GraphQLFactory {
     @Autowired
     private MoonsDataFetcher moonsDataFetcher;
     @Autowired
-    private CreateMoonDataFetcher createPlanetDataFetcher;
+    private CreateMoonDataFetcher createMoonDataFetcher;
     @Autowired
     private PlanetDataFetcher planetDataFetcher;
     @Autowired
@@ -47,7 +47,8 @@ public class GraphQLFactory {
         List<FederatedEntityResolver<?, ?>> entityResolvers = List.of(
                 new FederatedEntityResolver<Integer, PlanetDto>("Planet", id ->{
                    List<Moon> moons = moonService.getPlanetsById(id);
-                   List<MoonDto> moonDtos = moons.stream().map(u -> moonConverter.apply(u)).collect(Collectors.toList());
+                   List<MoonDto> moonDtos = moons.stream()
+                           .map(u -> moonConverter.apply(u)).collect(Collectors.toList());
                     return new PlanetDto(id, moonDtos);
                 }) {}
         );
@@ -72,7 +73,7 @@ public class GraphQLFactory {
                                 .dataFetcher("moons", moonsDataFetcher)
                 )
                 .type("Mutation", builder ->
-                        builder.dataFetcher("createMoon", createPlanetDataFetcher)
+                        builder.dataFetcher("createMoon", createMoonDataFetcher)
                 )
                 //this is needed if one of Moon´s field (planet) is of type Entity (Planet) -> make a new PlanetDto, set planet id from moonDto.getPlanetId
                 .type("Moon", builder ->

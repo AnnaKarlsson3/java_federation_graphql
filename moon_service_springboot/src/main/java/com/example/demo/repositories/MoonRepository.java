@@ -9,6 +9,5 @@ import java.util.List;
 
 @Repository
 public interface MoonRepository extends CrudRepository<Moon, Integer> {
-
     List<Moon> findByPlanet(int planet);
 }
