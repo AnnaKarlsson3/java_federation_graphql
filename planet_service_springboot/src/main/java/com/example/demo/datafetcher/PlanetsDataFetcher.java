@@ -17,14 +17,13 @@ import java.util.stream.Collectors;
 public class PlanetsDataFetcher implements DataFetcher<List<PlanetDto>> {
 
     @Autowired
-    private PlanetConverter userConverter;
+    private PlanetConverter planetConverter;
     @Autowired
-    private PlanetService userService;
-
+    private PlanetService planetService;
 
     @Override
     public List<PlanetDto> get(DataFetchingEnvironment dataFetchingEnvironment) throws Exception {
-        List<Planet> allUsers = userService.getAllPlanets();
-        return allUsers.stream().map(u -> userConverter.apply(u)).collect(Collectors.toList());
+        List<Planet> allPlanets = planetService.getAllPlanets();
+        return allPlanets.stream().map(u -> planetConverter.apply(u)).collect(Collectors.toList());
     }
 }

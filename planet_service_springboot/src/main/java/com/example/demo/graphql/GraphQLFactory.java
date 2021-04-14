@@ -60,15 +60,16 @@ public class GraphQLFactory {
     }
 
 
-    private RuntimeWiring createRuntimeWiring(){
-        return RuntimeWiring.newRuntimeWiring()
+ private RuntimeWiring createRuntimeWiring(){
+   return RuntimeWiring.newRuntimeWiring()
                 .type("Query", builder ->
                         builder
-                                .dataFetcher("planet", planetDataFetcher)
-                                .dataFetcher("planets", planetsDataFetcher)
+                        .dataFetcher("planet", planetDataFetcher)
+                        .dataFetcher("planets", planetsDataFetcher)
                 )
                 .type("Mutation", builder ->
-                        builder.dataFetcher("createPlanet", createPlanetDataFetcher)
+                        builder
+                        .dataFetcher("createPlanet", createPlanetDataFetcher)
                 )
                 .build();
 

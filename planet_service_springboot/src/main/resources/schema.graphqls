@@ -1,4 +1,4 @@
-type Query @extends{
+type Query{
     planet(id: ID!): Planet
     planets: [Planet!]!
 }
@@ -12,3 +12,5 @@ type Planet @key(fields: "id") {
 type Mutation{
     createPlanet(name: String!, size: Int!): Planet!
 }
+
+

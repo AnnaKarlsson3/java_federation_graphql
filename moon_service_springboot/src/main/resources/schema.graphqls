@@ -1,4 +1,4 @@
-type Query @extends{
+type Query{
     moon(id: ID!): Moon
     moons: [Moon!]!
 }
